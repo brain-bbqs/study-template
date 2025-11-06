@@ -1,0 +1,36 @@
+{
+  "Name": "EMBER Project TODO-FILL short name summarizing the study",
+  "BIDSVersion": "1.10.1",
+  "DatasetType": "study",
+  "Description": "TODO-FILL long(er) description, in a single long paragraph",
+  "License": "Apache 2.0 (subdatasets could have their own)",
+  "Authors": [
+    "First Last1",
+    "First Last2"
+  ],
+  "Keywords": [
+    "neuroscience",
+    "behavior",
+    "brain"
+  ],
+  "Acknowledgements": "Special thanks to ... TODO-FILL",
+  "HowToAcknowledge": "Please cite this paper: TODO-FILL https://bids-specification.readthedocs.io/en/stable/glossary.html#howtoacknowledge-metadata",
+  "Funding": [
+    "National Institute of TODO-FILL Grant ..."
+  ],
+  "GeneratedBy": [
+     {
+        "Description": "TODO-FILL https://bids-specification.readthedocs.io/en/stable/glossary.html#objects.metadata.GeneratedBy",
+        "Name": "TODO-FILL"
+     }
+  ],
+  "EthicsApprovals": [
+    "TODO-FILL https://bids-specification.readthedocs.io/en/stable/glossary.html#ethicsapprovals-metadata"
+  ],
+  "ReferencesAndLinks": [
+    "https://TODO-FILL"
+  ],
+  "SourceDatasets": [
+     {"URL": "TODO-FILL https://bids-specification.readthedocs.io/en/stable/glossary.html#sourcedatasets-metadata"}
+  ]
+}

@@ -1,0 +1,11 @@
+{
+    "Name": "{{ dataset_name }}",
+    "BIDSVersion": "{{ bids_version }}",
+    "DatasetType": "{{ dataset_type }}",
+    "Description": "{{ dataset_description }}",
+    "Authors": [
+        {% for author in authors.split(',') -%}
+        "{{ author.strip() }}"{% if not loop.last %},{% endif %}
+        {%- endfor %}
+    ]
+}

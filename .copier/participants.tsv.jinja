@@ -1,0 +1,4 @@
+participant_id	age	sex	group
+{% for i in range(1, participant_count + 1) -%}
+sub-{{ '%02d' % i }}	{{ age_mean|default(25) + (i % 10 - 5) }}	{{ ['M', 'F'][i % 2] }}	{{ ['control', 'patient'][i % 2] }}
+{% endfor %}

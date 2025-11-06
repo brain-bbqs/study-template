@@ -1,0 +1,37 @@
+# {{ dataset_name }}
+
+{{ dataset_description }}
+
+## Dataset Structure
+
+This is a BIDS {{ dataset_type }} dataset following BIDS version {{ bids_version }}.
+
+### Modalities
+
+{% for modality in modalities.split(',') -%}
+- {{ modality }}
+{% endfor %}
+
+{% if sessions %}
+### Sessions
+
+{% for session in sessions.split(',') -%}
+- {{ session }}
+{% endfor %}
+{% endif %}
+
+{% if tasks %}
+### Tasks
+
+{% for task in tasks.split(',') -%}
+- {{ task }}
+{% endfor %}
+{% endif %}
+
+## Usage
+
+This dataset was generated using BIDS Copier template system.
+
+## License
+
+{{ license|default('CC0') }}

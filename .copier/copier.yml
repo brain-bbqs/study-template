@@ -1,0 +1,41 @@
+dataset_name:
+  type: str
+  help: Name of your BIDS dataset
+  default: my-dataset
+  validator: '{% if not dataset_name.replace(''_'', '''').replace(''-'', '''').isalnum()
+    %}Invalid dataset name{% endif %}'
+dataset_description:
+  type: str
+  help: Brief description of your dataset
+  multiline: true
+  default: BIDS dataset
+dataset_type:
+  type: str
+  help: Type of BIDS dataset
+  default: raw
+  choices:
+    raw: Raw neuroimaging data
+    derivative: Processed/analyzed data
+    study: Complete study with raw and derivatives
+bids_version:
+  type: str
+  help: BIDS specification version
+  default: 1.10.0
+modalities:
+  type: str
+  help: 'Neuroimaging modalities (comma-separated)
+
+
+    Common combinations:
+
+    - Structural MRI: anat
+
+    - Functional MRI: anat,func,fmap
+
+    - Diffusion MRI: anat,dwi,fmap
+
+    - Complete study: anat,func,dwi,fmap,beh'
+  default: anat,func
+  validator: '{% if modalities and not all(m.strip() in [''anat'', ''func'', ''dwi'',
+    ''fmap'', ''perf'', ''eeg'', ''meg'', ''ieeg'', ''beh'', ''pet'', ''micr''] for
+    m in modalities.split('','')) %}Invalid modality{% endif %}'

@@ -1,6 +1,6 @@
 {
   "Name": "EMBER Project TODO-FILL short name summarizing the study",
-  "BIDSVersion": "1.10.1",
+  "BIDSVersion": "1.11.2",
   "DatasetType": "study",
   "Description": "TODO-FILL long(er) description, in a single long paragraph",
   "License": "Apache 2.0 (subdatasets could have their own)",
